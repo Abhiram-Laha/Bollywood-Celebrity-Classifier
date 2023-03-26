@@ -9,7 +9,18 @@ A Bollywood Celebrity Classifier is a type of machine learning model that can id
  <h2></h2>
 The model is trained on a large dataset of images of Bollywood celebrities, with each image labeled with the name of the celebrity.</p>
 Support Vector Machine (SVM) algorithm is used as a classifier in a Bollywood Celebrity Classifier.</p>
-The trained model can be deployed on various platforms such as mobile apps, websites, or cloud servers to provide a user-friendly interface for celebrity recognition.</p>
+The trained model can be deployed on various platforms such as mobile apps, websites, or cloud servers to provide a user-friendly interface for celebrity recognition.
+</p>
+
+
+<h2></h2>
+ <h2></h2>
+
+<h2>Video : </h2>
+
+
+
+https://user-images.githubusercontent.com/90309476/227788276-062d809b-e251-4fd0-99d2-f0a6a92f715b.mp4
 
 
 
