@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Celebrity Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand top" href="">Bollywood Celebrity Classifier</a>
+    </nav>
+
+    
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-player="Kartik_Aaryan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/12.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Kartik Aaryan</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="Priyanka_Chopra">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/17.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Priyanka Chopra</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+                        
+            <div class="col card-wrapper" data-player="Shahid_Kapoor">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/21.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Shahid Kapoor</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="Shah_Rukh_Khan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/22.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Shah Rukh Khan</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="Akshay_Kumar">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/4.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Akshay Kumar</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row submit">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3 submit">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't Classify Image. </p>
+                <p>Classifier was not able to Detect Face and Two Eyes Properly.</p>    
+            </div>
+
+         <div class="col-sm-4" id="resultHolder">
+            
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
+
+
+
+
+
+<nav class="navbar navbar-light bg-light justify-content-center f1">
+    <a class="navbar-brand foot" href="#">Bollywood Celebrities Available for Classification</a>
+</nav>
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Aamir_Khan Jolie">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/1.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Aamir Khan</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Aishwarya_Rai">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/2.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Aishwarya Rai</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+                    
+        <div class="col card-wrapper" data-player="Ajay_Devgn">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/3.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Ajay Devgn</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>          
+
+        <div class="col card-wrapper" data-player="Akshay_Kumar">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/4.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Akshay Kumar</h4>
+                    </p>
+                </div>
+            </div>
+        </div>      
+
+        <div class="col card-wrapper" data-player="Amitabh_Bachchan">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/5.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Amitabh Bachchan</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Anil_Kapoor">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/6.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Anil Kapoor</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Bobby_Deol">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/7.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Bobby Deol</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+                    
+        <div class="col card-wrapper" data-player="Deepika_Padukone">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/8.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Deepika Padukone</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>          
+
+        <div class="col card-wrapper" data-player="Hrithik_Roshan">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/9.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Hrithik Roshan</h4>
+                    </p>
+                </div>
+            </div>
+        </div>      
+
+        <div class="col card-wrapper" data-player="John_Abraham">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/10.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">John Abraham</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Kareena_Kapoor">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/11.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Kareena Kapoor</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Kartik_Aaryan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/12.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Kartik Aaryan</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+                    
+        <div class="col card-wrapper" data-player="Katrina_Kaif">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/13.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Katrina Kaif</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>          
+
+        <div class="col card-wrapper" data-player="Kriti_Sanon">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/14.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Kriti Sanon</h4>
+                    </p>
+                </div>
+            </div>
+        </div>      
+
+        <div class="col card-wrapper" data-player="Madhuri_Dixit">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/15.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Madhuri Dixit</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Manoj_Bajpayee">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/16.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Manoj Bajpayee</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Priyanka_Chopra">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/17.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Priyanka Chopra</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="col card-wrapper" data-player="Ranveer_Singh">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/18.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Ranveer Singh</h4>
+                    </p>
+                </div>
+            </div>
+    </div>          
+
+    <div class="col card-wrapper" data-player="Salman_Khan">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/19.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Salman Khan</h4>
+                </p>
+            </div>
+        </div>
+    </div>      
+
+    <div class="col card-wrapper" data-player="Sanjay_Dutt">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/20.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Sanjay Dutt</h4>
+                </p>
+            </div>
+        </div>
+    </div>
+                    
+        
+
+    </div>
+
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Shahid_Kapoor">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/21.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Shahid Kapoor</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Shah_Rukh_Khan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/22.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Shah Rukh Khan</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="col card-wrapper" data-player="Shraddha_Kapoor">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/23.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Shraddha Kapoor</h4>
+                    </p>
+                </div>
+            </div>
+    </div>          
+
+    <div class="col card-wrapper" data-player="Tiger_Shroff">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/24.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Tiger Shroff</h4>
+                </p>
+            </div>
+        </div>
+    </div>      
+
+    <div class="col card-wrapper" data-player="Varun_Dhawan">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/25.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Varun Dhawan</h4>
+                </p>
+            </div>
+        </div>
+    </div>
+                    
+        
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col card-wrapper" data-player="Vicky_Kaushal">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/26.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Vicky Kaushal</h4>
+                    </p>
+                </div>
+            </div>
+        </div>            
+        <div class="col card-wrapper" data-player="Vidya_Balan">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/27.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Vidya Balan</h4>
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="col card-wrapper" data-player="Vivek_Oberoi">
+            <div class="card border-0">
+                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <img class="w-100 h-100" src="./images/28.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body text-center mt-4">
+                    <h4 class="text-uppercase card-title">Vivek Oberoi</h4>
+                    </p>
+                </div>
+            </div>
+    </div>          
+
+    <div class="col card-wrapper" data-player="Yami_Gautam">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/29.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Yami Gautam</h4>
+                </p>
+            </div>
+        </div>
+    </div>      
+
+    <div class="col card-wrapper" data-player="Zareen_Khan">
+        <div class="card border-0">
+            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="./images/30.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body text-center mt-4">
+                <h4 class="text-uppercase card-title">Zareen Khan</h4>
+                </p>
+            </div>
+        </div>
+    </div>
+                    
+        
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
