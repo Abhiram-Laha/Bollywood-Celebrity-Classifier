@@ -20,7 +20,11 @@ The trained model can be deployed on various platforms such as mobile apps, webs
 
 
 
-https://user-images.githubusercontent.com/90309476/227788276-062d809b-e251-4fd0-99d2-f0a6a92f715b.mp4
+
+
+https://user-images.githubusercontent.com/90309476/227789515-ce425ff4-7d81-4742-beed-5c81d636a6bd.mp4
+
+
 
 
 
